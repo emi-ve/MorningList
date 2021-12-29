@@ -4,7 +4,7 @@ export default function List(props) {
     return (
         <li className="list stack-small">
         <div className="c-cb">
-          <label className="list-label" htmlFor="list-1">
+          <label className="list-label" htmlFor= {props.id}>
             {props.name}
           </label>
         </div>

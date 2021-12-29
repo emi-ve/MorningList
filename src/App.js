@@ -3,6 +3,11 @@ import './App.css';
 import List from "./components/List.js";
 
 function App(props) {
+
+  const taskList = props.tasks?.map(task => (<List id={task.id} name={task.name} completed={task.completed} />
+  ));
+
+  
   return (
     <div className="morningList">
       <h1>Good Morning!</h1>
@@ -48,9 +53,8 @@ function App(props) {
         className="list-list stack-large stack-exception"
         aria-labelledby="list-heading"
       >
-        <List name="Cat"/>
-        <List name="Fuzzy Socks"/>
-        <List name="Coffee" />
+          <List name="Eat" />
+          {taskList}
       </ul>
     </div>
   );
